@@ -1,23 +1,17 @@
 #8958
-n = int(input())
-a = []
-score = 0
-tot_score = 0
-for i in range(n):
-    ans = str(input())
-    print(ans[i])
-    for j in range(len(ans)):
-        #while을 써보기
-        while ans[j] == "0":
-            score += 1
-        #     print(score)
-        # print(score)
-            # score count
-    # ct = ans.count("O")
-    # a.append(ct)
+n = int(input()) # N번 반복
+score = 0 # Score의 초기값
+tot_score = 0 # 총 값의 초기값
+for i in range(n): # n번 반복한다
+    ans = str(input()) # n번만큼 String 값을 입력받는다
+    for j in range(len(ans)): # String값의 길이만큼 하나씩 대조해본다
+        if ans[j] == 'O': # O이 나온다면
+            score += 1  # score에 1을 추가시켜주고
+            tot_score += score # 총점에 score를 더한다.
+        else:
+            score = 0 # O가 아니라면 score를 초기화시킨다.
+    print(tot_score) # 총점 출력
+    tot_score = 0 # 총점 초기화
+    score = 0 # score 초기화
 
-    # O가 반복되는 횟수만큼 SCORE가 증가함
-    # 1 - 1 2 - 2 3 - 3 4 - 4
-    # O 와 X를 비교했을때 O가 아니라면 count ㄴㄴ
-
-# print(a)
+# print(tot_score_list)

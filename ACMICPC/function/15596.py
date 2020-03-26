@@ -1,4 +1,5 @@
-def solve(a: list):
-    input(n)
-    for i in range(n):
-        print(n)
+def solve(numbers):
+    res = 0
+    for num in numbers:
+        res += num
+    return res
