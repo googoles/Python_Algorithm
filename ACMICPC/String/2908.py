@@ -1,4 +1,6 @@
 # print(*list(input().split()))
 
-a = list(map(str, input().split()))
-print(a)
+a,b = list(map(str, input().split()))
+a = a[::-1]
+b = b[::-1]
+print(a) if a > b else print(b)
