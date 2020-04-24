@@ -10,11 +10,26 @@
 # n = int(input())
 # days =  [ "월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일" ]
 # print(('오늘은 {}이고, {}일 후에는 {}입니다.').format(days[0],n,days[n%7]))
-n = input()
-sum = 0
-for i in str(n):
-    sum += int(i)
-print(sum)
+# n = input()
+# sum = 0
+# for i in str(n):
+#     sum += int(i)
+# print(sum)
+start_day = 2 # tues
+last_day = 31
+print('\tS\tM\tT\tW\tT\tF\tS')
+for vacant_day in range(start_day):
+    print('\t', end='')
+for i in range(1,last_day+1):
+    if i % 7 != (7-start_day):
+        print('\t%d' %i, end='')
+    elif i % 7 == (7-start_day):
+        print('\t%d\n' %i)
+
+
+
+
+
 
 
 # def sum_digit(number):

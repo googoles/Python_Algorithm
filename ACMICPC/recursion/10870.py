@@ -13,3 +13,17 @@ def fib(a, b, count):
 
         return fib(b, c, count + 1)
 fib(0, 1, 2)
+
+# import math
+# x1 = int(input())
+# y1 = int(input())
+# x2 = int(input())
+# y2 = int(input())
+#
+# dx = x2-x1
+# dy = y2-y1
+#
+# d = math.sqrt(dx**2 + dy ** 2)
+#
+# print("거리 %d" %d)
+# print("학번 이름")

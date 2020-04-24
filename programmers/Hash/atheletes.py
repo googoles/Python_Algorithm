@@ -4,26 +4,32 @@
 #     answer = ''
 #     return answer
 
-def solution(participant,completion):
-    # p_list = list(map(str, input().split(",")))
-    # c_list = list(map(str, input().split(",")))
+# def solution(participant,completion):
+#     # p_list = list(map(str, input().split(",")))
+#     # c_list = list(map(str, input().split(",")))
+#     participant.sort()
+#     completion.sort()
+#     completion.append("")
+#     answer = ''
+#     for i in range(len(participant)):
+#         if participant[i] in completion and participant[i] == completion[i]:
+#             pass
+#         else:
+#             answer = participant[i]
+#             print(answer)
+#             break
+#     return answer
+def solution(participant, completion):
     participant.sort()
     completion.sort()
-    completion.append("")
-    answer = ''
-    for i in range(len(participant)):
-        if participant[i] in completion and participant[i] == completion[i]:
-            pass
-        else:
-            answer = participant[i]
-            print(answer)
-            break
-    return answer
-    # print(answer)
+    for i in range(len(completion)):
+        if participant[i] != completion[i]:
+            return participant[i]
+    return participant[-1]
 
 participant = list(map(str, input().split(",")))
 completion = list(map(str, input().split(",")))
-solution(participant, completion)
+print(solution(participant, completion))
 
 
     # def solution(participant, completion):
