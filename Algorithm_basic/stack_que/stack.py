@@ -42,12 +42,10 @@ class Stack:
         self.head = None
 
     def push(self,data):
+        return data
 
 
 
-
-
-ㅇ
 
 
 # test1 = ['a','b','c']
