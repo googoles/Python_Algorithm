@@ -10,8 +10,11 @@
 # 검색할 숫자(search) < 중간값 이면, 앞 부분의 서브 리스트에서 검색할 숫자를 찾는다.
 import random
 import datetime
-data_list = random.sample(range(100000),10000)
+
+data_list = random.sample(range(100000), 10000)
 data_list.sort()
+
+
 def binary_search(data_list, search):
     print(data_list)
 
@@ -26,8 +29,10 @@ def binary_search(data_list, search):
     if search == data_list[medium]:
         return True
     if search > data_list[medium]:
-        return binary_search(data_list[medium:],search)
+        return binary_search(data_list[medium:], search)
     else:
-        return binary_search(data_list[:medium],search)
-print(binary_search(data_list,34143))
+        return binary_search(data_list[:medium], search)
+
+
+print(binary_search(data_list, 34143))
 print(datetime.datetime.now())
