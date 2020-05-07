@@ -15,36 +15,38 @@ from collections import *
 
 #
 N = 5
-stages = [2,1,2,6,2,4,3,3]
+stages = [2, 1, 2, 6, 2, 4, 3, 3]
+
 
 def solution(N, stages):
-
     participants = len(stages)
     did_pass = []
 
-    for _ in range(1,N+1):
+    for _ in range(1, N + 1):
         did_pass.append(stages.count(_))
 
     rate_dict = dict()
     for i in range(N):
         if i == 0:
-            rate = did_pass[i]/(len(stages))
+            rate = did_pass[i] / participants
         else:
+            if (participants - sum(did_pass[:i]) != 0):
+                rate = did_pass[i] / (participants - sum(did_pass[:i]))
+            else:
+                rate = did_pass[i] / (participants - sum(did_pass[:i]) + 1)
 
-            rate = did_pass[i]/(len(stages)-sum(did_pass[:i]))
-
-        rate_dict[i+1] = rate
+        rate_dict[i + 1] = rate
 
     answer = []
-    for y,v in sorted(rate_dict.items(), key=lambda rate_dict:rate_dict[1], reverse = True):
+    for y, v in sorted(rate_dict.items(), key=lambda rate_dict: rate_dict[1], reverse=True):
         # print(y)
         answer.append(y)
 
     return answer
 
-print(solution(N,stages))
-# print(did_pass)
 
+print(solution(N, stages))
+# print(did_pass)
 
 
 #     for i in range(N):
