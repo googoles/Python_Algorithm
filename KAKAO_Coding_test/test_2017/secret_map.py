@@ -13,20 +13,26 @@
 
 # ["#####","# # #", "### #", "# ##", "#####"]
 
-# n = 6
-# arr1 = [46, 33, 33 ,22, 31, 50]
-# arr2 = [27 ,56, 19, 14, 14, 10]
+
 
 
 def solution(n,arr1,arr2):
     result_list = []
     for i in range(n):
-        result = bin(arr1[i] | arr2[i]).replace('0b','').replace('1','#').replace('0',' ')
+        # result = bin(arr1[i] | arr2[i]).replace('0b','').replace('1','#').replace('0',' ')
+        result = str(bin(arr1[i] | arr2[i])[2:])
+        result = '0'*(n - len(result)) + result
+        a = result.replace('0b','').replace('1','#').replace('0',' ')
         # print(result.replace('0b','').replace('1','#').replace('0',' '))
-        result_list.append(result)
+        result_list.append(a)
     print(result_list)
     return result_list
-n = 5
-arr1 = [9,20,28,18,11]
-arr2 = [30, 1, 21, 17, 28]
+# n = 5
+# arr1 = [9,20,28,18,11]
+# arr2 = [30, 1, 21, 17, 28]
+# solution(n,arr1,arr2)
+
+n = 6
+arr1 = [46, 33, 33 ,22, 31, 50]
+arr2 = [27 ,56, 19, 14, 14, 10]
 solution(n,arr1,arr2)
