@@ -26,6 +26,8 @@ for i in range(1,last_day+1):
     elif i % 7 == (7-start_day):
         print('\t%d\n' %i)
 
+        print('a')
+
 
 
 
