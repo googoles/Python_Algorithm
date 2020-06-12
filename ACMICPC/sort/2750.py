@@ -5,3 +5,5 @@ for _ in range(n):
 a.sort(); set(a)
 for _ in range(len(a)):
     print(a[_])
+    
+    #시험..ㅠ
