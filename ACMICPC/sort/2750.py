@@ -6,4 +6,4 @@ a.sort(); set(a)
 for _ in range(len(a)):
     print(a[_])
     
-    #시험..ㅠㅠㅠbbbbb
+    #시험..ㅠㅠㅠbbbbb b
