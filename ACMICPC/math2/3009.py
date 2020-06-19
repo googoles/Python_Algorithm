@@ -8,4 +8,4 @@ while(len(A)<3):
     A.append(a)
     B.append(b)
 
-for i in range(0, )
+for i in range(0, )f
