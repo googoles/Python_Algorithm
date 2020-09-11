@@ -7,4 +7,6 @@ strs = ["eat","tea","tan","ate","nat","bat"]
 anagram = collections.defaultdict(strs)
 
 for words in strs:
+    anagram[''.join(sorted(words))].append(words)
 
+print(anagram.values())
